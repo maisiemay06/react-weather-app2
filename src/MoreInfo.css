@@ -1,0 +1,19 @@
+.sunrise,
+.sunset,
+.humidity,
+.wind {
+  text-align: center;
+  font-size: 23px;
+}
+.sunrise-time,
+.sunset-time,
+.humid-value,
+.wind-speed {
+  text-align: center;
+  color: #2d4f53;
+  font-size: 19px;
+}
+.fas {
+  font-size: 23px;
+  color: #2d4f53;
+}

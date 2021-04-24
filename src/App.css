@@ -1,0 +1,9 @@
+.App {
+  color: #3398a4;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.card {
+  margin: 10px 0;
+  border: 1px solid #2d4f53;
+  max-width: 900px;
+}

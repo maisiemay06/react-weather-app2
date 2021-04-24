@@ -1,0 +1,32 @@
+.city {
+  margin: 10px 0 0 0;
+  font-size: 50px;
+}
+
+.current-weather,
+.date-time {
+  font-size: 28px;
+}
+
+.unit-selector {
+  color: #2d4f53;
+  font-size: 19px;
+  position: relative;
+  top: -66px;
+  left: 90px;
+  text-decoration: none;
+}
+
+.temperature {
+  font-size: 75px;
+  line-height: 55px;
+}
+
+.weather-icon {
+  margin-top: 70px;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
