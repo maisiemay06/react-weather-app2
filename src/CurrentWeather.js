@@ -13,7 +13,7 @@ export default function CurrentWeather() {
           Currently Cloudy
         </h4>
         <h1 className="temperature" id="current-temperature">
-          15
+          16
         </h1>
         <div className="unit-selector">
           <button href="" id="celcius-selector" className="active">

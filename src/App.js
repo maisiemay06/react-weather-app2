@@ -4,6 +4,7 @@ import CurrentWeather from "./CurrentWeather";
 import MoreInfo from "./MoreInfo";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
   return (
