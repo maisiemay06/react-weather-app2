@@ -1,6 +1,6 @@
 import React from "react";
 import "./CurrentWeather.css";
-import axios from 'axios';
+//import axios from 'axios';
 
 export default function CurrentWeather() {
   return (
@@ -13,7 +13,7 @@ export default function CurrentWeather() {
           Currently Cloudy
         </h4>
         <h1 className="temperature" id="current-temperature">
-          16
+          18
         </h1>
         <div className="unit-selector">
           <button href="" id="celcius-selector" className="active">
