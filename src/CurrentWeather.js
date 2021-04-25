@@ -10,6 +10,7 @@ export default function CurrentWeather(props) {
   const [city, setCity] = useState(props.defaultCity);
   
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -20,6 +21,8 @@ export default function CurrentWeather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
+      sunrise: "04:00",
+      sunset: "21:00"
     });
   
   }
@@ -60,11 +63,9 @@ export default function CurrentWeather(props) {
             />
           </div>
         </div>
-        <div className="card">
-          <div className="card-body">
-            <MoreInfo />
+        <div className="card more-info-card">
+            <MoreInfo sunrise={weatherData.sunrise} sunset={weatherData.sunset} humidity={weatherData.humidity} wind={weatherData.wind}/>
           </div>
-        </div>
       </div>
       
     );  

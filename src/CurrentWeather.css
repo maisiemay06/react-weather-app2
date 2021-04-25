@@ -34,3 +34,8 @@ button {
 .loading {
   text-align: center;
 }
+
+.more-info-card {
+  width: 600px;
+  padding: 10px;
+}
