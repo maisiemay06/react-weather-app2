@@ -13,7 +13,7 @@ export default function App() {
         <div className="card">
           <div className="card-body">
             <Search />
-            <CurrentWeather />
+            <CurrentWeather defaultCity="Leeds"/>
           </div>
         </div>
         <div className="card">

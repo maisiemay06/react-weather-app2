@@ -1,4 +1,5 @@
 import React from "react";
+import CurrentWeather from "./CurrentWeather";
 import "./MoreInfo.css";
 
 export default function MoreInfo() {
@@ -7,7 +8,7 @@ export default function MoreInfo() {
       <div className="col-3">
         <h6 className="sunrise">
           <i className="fas fa-sun"></i>
-          Sunrise
+           Sunrise
         </h6>
         <h6 className="sunrise-time" id="sunrise-time">
           06:00
@@ -16,7 +17,7 @@ export default function MoreInfo() {
       <div className="col-3">
         <h6 className="sunset">
           <i className="fas fa-moon"></i>
-          Sunset
+           Sunset
         </h6>
         <h6 className="sunset-time" id="sunset-time">
           20:00
@@ -38,7 +39,7 @@ export default function MoreInfo() {
           Wind
         </h6>
         <h6 className="wind-speed" id="wind-speed">
-          11mph
+          12mph
         </h6>
       </div>
     </div>

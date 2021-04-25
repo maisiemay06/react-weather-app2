@@ -30,3 +30,7 @@ button {
   background-color: white;
   border: none;
 }
+
+.loading {
+  text-align: center;
+}
