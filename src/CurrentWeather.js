@@ -2,6 +2,8 @@ import React, { useState }from "react";
 import "./CurrentWeather.css";
 import axios from 'axios';
 import Loader from "react-loader-spinner";
+import MoreInfo from "./MoreInfo";
+import FormatDate from "./FormatDate";
 
 export default function CurrentWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -14,7 +16,7 @@ export default function CurrentWeather(props) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       city: response.data.name,
-      date: "Monday, 10:20",
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
@@ -45,7 +47,7 @@ export default function CurrentWeather(props) {
             </button>
           </div>
           <h4 className="date-time" id="day-time">
-            {weatherData.date}
+            <FormatDate date={weatherData.date} />
           </h4>
         </div>
         <div className="col-6">
@@ -58,12 +60,16 @@ export default function CurrentWeather(props) {
             />
           </div>
         </div>
-        
+        <div className="card">
+          <div className="card-body">
+            <MoreInfo />
+          </div>
+        </div>
       </div>
       
     );  
   } else {
-    const apiKey = "d8f001fd84ae14313a7e46b613ac8c97";
+    const apiKey = "91afe9171359147d9b8594d8a2e6e434";
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
