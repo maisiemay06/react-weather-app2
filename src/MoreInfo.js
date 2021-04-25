@@ -33,7 +33,7 @@ export default function MoreInfo(props) {
            Sunset
         </h6>
         <h6 className="sunset-time" id="sunset-time">
-          {props.sunrise}
+          {props.sunset}
         </h6>
       </div>
       <div className="col-3">

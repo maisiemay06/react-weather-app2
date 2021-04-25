@@ -4,13 +4,13 @@ import axios from 'axios';
 import Loader from "react-loader-spinner";
 import MoreInfo from "./MoreInfo";
 import FormatDate from "./FormatDate";
+import FormatTime from "./FormatTime";
 
 export default function CurrentWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity);
   
   function handleResponse(response) {
-    console.log(response);
+  
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -21,8 +21,8 @@ export default function CurrentWeather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      sunrise: "04:00",
-      sunset: "21:00"
+      sunrise: <FormatTime time={new Date(response.data.sys.sunrise * 1000)}/>,
+      sunset: <FormatTime time={new Date(response.data.sys.sunset * 1000)}/>
     });
   
   }
