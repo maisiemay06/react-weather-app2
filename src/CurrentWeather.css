@@ -1,5 +1,10 @@
+.weather-body {
+  margin: 0 0 0 10px;
+  padding: 10px;
+}
+
+
 .city {
-  margin: 10px 0 0 0;
   font-size: 50px;
 }
 
@@ -19,7 +24,8 @@
 
 .temperature {
   font-size: 75px;
-  line-height: 55px;
+  line-height: 45px;
+  padding: 10px 0 0 0;
 }
 
 .weather-icon {
@@ -35,7 +41,3 @@ button {
   text-align: center;
 }
 
-.more-info-card {
-  width: 600px;
-  padding: 10px;
-}

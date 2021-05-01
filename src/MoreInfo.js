@@ -6,6 +6,8 @@ import ReactAnimatedWeather from "react-animated-weather";
 
 export default function MoreInfo(props) {
   return (
+    <div className="card">
+      <div className="card-body">
     <div className="row">
       <div className="col-3">
         <h6 className="sunrise">
@@ -19,7 +21,7 @@ export default function MoreInfo(props) {
            Sunrise
         </h6>
         <h6 className="sunrise-time" id="sunrise-time">
-          {props.sunrise}
+          {props.data.sunrise}
         </h6>
       </div>
       <div className="col-3">
@@ -33,7 +35,7 @@ export default function MoreInfo(props) {
            Sunset
         </h6>
         <h6 className="sunset-time" id="sunset-time">
-          {props.sunset}
+          {props.data.sunset}
         </h6>
       </div>
       <div className="col-3">
@@ -47,7 +49,7 @@ export default function MoreInfo(props) {
         </h6>
 
         <h6 className="humid-value" id="humidity">
-          {props.humidity}%
+          {props.data.humidity}%
         </h6>
       </div>
       <div className="col-3">
@@ -60,9 +62,12 @@ export default function MoreInfo(props) {
           /> Wind
         </h6>
         <h6 className="wind-speed" id="wind-speed">
-          {Math.round(props.wind)}mph
+          {Math.round(props.data.wind)}mph
         </h6>
       </div>
     </div>
+    </div>
+    </div>
+  
   );
 }
