@@ -1,6 +1,5 @@
 import "./App.css";
 import Search from "./Search";
-import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
@@ -10,7 +9,17 @@ export default function App() {
             <Search defaultCity="Leeds"/>
               
       
-        <Footer />
+            <div className="Footer">
+      <a
+        href="https://github.com/maisiemay06/react-weather-app2"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {" "}
+        Open-source code
+      </a>{" "}
+      by Maisie Palmer
+    </div>
       </div>
     </div>
   );
