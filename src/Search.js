@@ -4,7 +4,6 @@ import "./Search.css";
 import axios from "axios";
 import FormatTime from "./FormatTime";
 import Loader from "react-loader-spinner";
-import Forecast from "./Forecast";
 import MoreInfo from "./MoreInfo";
 
 export default function Search(props) {

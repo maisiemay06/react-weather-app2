@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+
 import "./Forecast.css";
-import axios from "axios";
 import FormatForecast from "./FormatForecast";
 
-export default function Forecast(props) {
+export default function Forecast() {
   
   return (
     <div className="card">
