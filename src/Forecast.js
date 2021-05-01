@@ -1,23 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Forecast.css";
-import WeatherIcon from "./WeatherIcon";
+import axios from "axios";
+import FormatForecast from "./FormatForecast";
 
 export default function Forecast(props) {
+  
   return (
     <div className="card">
       <div className="card-body">
     <div className="row Forecast" id="forecast">
       <div className="col-2 text-center">
-        <div className="forecast">
-          <WeatherIcon icon={props.data.icon} size="40"/>
-          <p>
-            Tuesday <br />
-            15º
-          </p>
-        </div>
+      <FormatForecast />
       </div>
     </div>
     </div>
     </div>
   );
-}
+  }
+  

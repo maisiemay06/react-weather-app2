@@ -1,6 +1,6 @@
 .weather-body {
   margin: 0 0 0 10px;
-  padding: 10px;
+  padding: 15px;
 }
 
 
@@ -13,29 +13,14 @@
   font-size: 28px;
 }
 
-.unit-selector {
-  color: #2d4f53;
-  font-size: 19px;
-  position: relative;
-  top: -66px;
-  left: 90px;
-  text-decoration: none;
-}
 
-.temperature {
-  font-size: 75px;
-  line-height: 45px;
-  padding: 10px 0 0 0;
-}
+
 
 .weather-icon {
   margin-top: 35px;
 }
 
-button {
-  background-color: white;
-  border: none;
-}
+
 
 .loading {
   text-align: center;

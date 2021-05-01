@@ -23,7 +23,9 @@ export default function Search(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       sunrise: <FormatTime time={new Date(response.data.sys.sunrise * 1000)}/>,
-      sunset: <FormatTime time={new Date(response.data.sys.sunset * 1000)}/>
+      sunset: <FormatTime time={new Date(response.data.sys.sunset * 1000)}/>,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon
     });
   }
 
