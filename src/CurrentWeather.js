@@ -9,14 +9,14 @@ export default function CurrentWeather(props) {
       <div className="weather-body">
       <div className="row">
         <div className="col-6">
-          <h2 className="city" id="city-name">
+          <h2 className="city">
             {props.data.city}
           </h2>
-          <h4 className="current-weather text-capitalize" id="weather-description">
+          <h4 className="current-weather text-capitalize">
             {props.data.description}
           </h4>
             <WeatherTemperature celsius={props.data.temperature}/>
-          <h4 className="date-time" id="day-time">
+          <h4 className="date-time">
             <FormatDate date={props.data.date} />
           </h4>
         </div>

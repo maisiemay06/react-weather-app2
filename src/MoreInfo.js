@@ -20,7 +20,7 @@ export default function MoreInfo(props) {
          
            Sunrise
         </h6>
-        <h6 className="sunrise-time" id="sunrise-time">
+        <h6 className="sunrise-time">
           {props.data.sunrise}
         </h6>
       </div>
@@ -34,7 +34,7 @@ export default function MoreInfo(props) {
           />
            Sunset
         </h6>
-        <h6 className="sunset-time" id="sunset-time">
+        <h6 className="sunset-time">
           {props.data.sunset}
         </h6>
       </div>
@@ -48,7 +48,7 @@ export default function MoreInfo(props) {
           />Humidity
         </h6>
 
-        <h6 className="humid-value" id="humidity">
+        <h6 className="humid-value">
           {props.data.humidity}%
         </h6>
       </div>
@@ -61,7 +61,7 @@ export default function MoreInfo(props) {
           animate={true}
           /> Wind
         </h6>
-        <h6 className="wind-speed" id="wind-speed">
+        <h6 className="wind-speed">
           {Math.round(props.data.wind)}mph
         </h6>
       </div>

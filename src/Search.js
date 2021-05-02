@@ -5,6 +5,7 @@ import axios from "axios";
 import FormatTime from "./FormatTime";
 import Loader from "react-loader-spinner";
 import MoreInfo from "./MoreInfo";
+import Forecast from "./Forecast";
 
 export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -77,6 +78,7 @@ export default function Search(props) {
     <CurrentWeather data={weatherData}/>
     </div>
     <MoreInfo data={weatherData}/>
+    <Forecast data={weatherData}/> 
   </div>
   );
   } else {

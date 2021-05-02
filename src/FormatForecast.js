@@ -7,7 +7,7 @@ export default function FormatForecast(props) {
           <WeatherIcon icon={"01d"} size={40}/>
           <p>
             Tuesday <br />
-            12º/15º
+            <span className="temp-min">12º</span> <span className="temp-max">15º</span>
           </p>
         </div>
     )
