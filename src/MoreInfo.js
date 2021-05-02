@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MoreInfo.css";
 import ReactAnimatedWeather from "react-animated-weather";
-
-
+import { ChevronDoubleDown } from "react-bootstrap-icons";
+import { ChevronDoubleUp } from "react-bootstrap-icons";
 
 export default function MoreInfo(props) {
-  return (
+let [visible, setVisible] = useState(false);
+
+function showMore(event) {
+event.preventDefault();
+setVisible(true);
+}
+
+function showLess(event) {
+  event.preventDefault();
+  setVisible(false);
+  }
+
+if (visible) {
+  return(
     <div className="card">
       <div className="card-body">
+      <button onClick={showLess} className="col-12 less-button"> <ChevronDoubleUp /> {" Less Info"} 
+      </button>
     <div className="row">
       <div className="col-3">
         <h6 className="sunrise">
@@ -17,7 +32,6 @@ export default function MoreInfo(props) {
           size={19}
           animate={true}
           />
-         
            Sunrise
         </h6>
         <h6 className="sunrise-time">
@@ -70,4 +84,15 @@ export default function MoreInfo(props) {
     </div>
   
   );
+} else {
+  return(
+    <div className="card">
+    <div className="card-body">
+  <button onClick={showMore} className="col-12"> <ChevronDoubleDown /> {" More Info"}
+  
+  </button>
+  </div>
+  </div>
+)
+}
 }
