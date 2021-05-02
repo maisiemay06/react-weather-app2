@@ -9,7 +9,6 @@ let [loaded, setLoaded] = useState(false);
 let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
     setForecast(response.data.daily);
     setLoaded(true);
   }
@@ -19,9 +18,15 @@ let [forecast, setForecast] = useState(null);
       <div className="card">
         <div className="card-body">
           <div className="row Forecast">
-            <div className="col-2 text-center">
-              <FormatForecast data={forecast[0]}/>
-            </div>
+            {forecast.map(function (dailyForecast, index){
+              if (index > 0 && index < 6) {
+              return (
+               <div className="col text-center" key={index}>
+                <FormatForecast data={dailyForecast}/>
+                </div>
+              );
+              }
+              })}  
           </div>
         </div>
       </div>
