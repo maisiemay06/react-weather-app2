@@ -7,6 +7,7 @@ import { ChevronDoubleUp } from "react-bootstrap-icons";
 export default function MoreInfo(props) {
 let [visible, setVisible] = useState(false);
 
+
 function showMore(event) {
 event.preventDefault();
 setVisible(true);
@@ -88,7 +89,7 @@ if (visible) {
   return(
     <div className="card">
     <div className="card-body">
-  <button onClick={showMore} className="col-12"> <ChevronDoubleDown /> {" More Info"}
+  <button onClick={showMore} className="col-12"> <ChevronDoubleDown /> {" Show More Info"}
   
   </button>
   </div>

@@ -2,49 +2,49 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Forecast.css";
-import FormatForecast from "./FormatForecast";
+import FormatHourlyForecast from "./FormatHourlyForecast";
 import { ChevronDoubleDown } from "react-bootstrap-icons";
 import { ChevronDoubleUp } from "react-bootstrap-icons";
 
-export default function Forecast(props) {
+export default function HourlyForecast(props) {
 let [loaded, setLoaded] = useState(false);
-let [forecast, setForecast] = useState(null);
-let [forecastVisible, setForecastVisible] = useState(false);
+let [hourlyForecast, setHourlyForecast] = useState(null);
+let [hourlyForecastVisible, setHourlyForecastVisible] = useState(false);
 
 useEffect(() => {
 setLoaded(false);
-setForecastVisible(false);
+setHourlyForecastVisible(false);
 }, [props.data.coords]);
 
   function handleResponse(response) {
-    setForecast(response.data.daily);
+    setHourlyForecast(response.data.hourly);
     setLoaded(true);
   }
 
 
-  function showForecast (event) {
+  function showHourlyForecast (event) {
     event.preventDefault();
-    setForecastVisible(true);
+    setHourlyForecastVisible(true);
       }
 
 
-      function hideForecast (event) {
+      function hideHourlyForecast (event) {
         event.preventDefault();
-        setForecastVisible(false);
+        setHourlyForecastVisible(false);
           }
    
-if (forecastVisible) {
+if (hourlyForecastVisible) {
   return (
     <div className="card">
         <div className="card-body">
-        <button onClick={hideForecast} className="col-12 less-button"> <ChevronDoubleUp /> {" Close Forecast"} 
+        <button onClick={hideHourlyForecast} className="col-12 less-button"> <ChevronDoubleUp /> {" Close Hourly Forecast"} 
       </button>
     <div className="row Forecast">
-          {forecast.map(function (dailyForecast, index){
+          {hourlyForecast.map(function (hourlyForecast, index){
             if (index > 0 && index < 6) {
             return (
              <div className="col text-center" key={index}>
-              <FormatForecast data={dailyForecast}/>
+              <FormatHourlyForecast data={hourlyForecast}/>
               </div>
             );
             } else {
@@ -56,13 +56,14 @@ if (forecastVisible) {
         </div>
         
   )
-} 
+
+}
 
   if (loaded) {
     return (
       <div className="card">
         <div className="card-body">
-        <button onClick={showForecast} className="col-12"> <ChevronDoubleDown /> {" Show Five-Day Forecast"} </button>
+        <button onClick={showHourlyForecast} className="col-12"> <ChevronDoubleDown /> {" Show Hourly Forecast"} </button>
         </div>
       </div>
     );
