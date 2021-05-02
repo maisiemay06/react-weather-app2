@@ -16,8 +16,12 @@ return days[day];
         <div className="forecast">
           <WeatherIcon icon={props.data.weather[0].icon} size={40}/>
           <p>
-            {day()} <br />
-            <span className="temp-min">{Math.round(props.data.temp.min)}º</span> <span className="temp-max">{Math.round(props.data.temp.max)}º</span>
+            {day()} 
+            <br />
+            <span className="temp-min">{Math.round(props.data.temp.min)}º </span> 
+            <span className="temp-max">{ Math.round(props.data.temp.max)}º</span>
+          <br /> 
+          <span className="forecast-description text-capitalize">{props.data.weather[0].description}</span>
           </p>
         </div>
     )
